@@ -1,7 +1,4 @@
 """
-Copyright (c) 2022 Big Duck Inc.
-
-Author      : John Doe
 Date Created: 2023-01-78
 
 Description:
@@ -16,6 +13,7 @@ import sys
 from pathlib import Path
 
 import pydantic as pyd
+from my_shared_module import shared_function
 
 APP_VERSION = "v0.0.1"
 
@@ -50,7 +48,8 @@ class AppConfig(pyd.BaseModel):
 
 def main() -> None:  # pylint: disable=missing-function-docstring
     app_config = AppConfig.init()
-
+    print("Application Configured")
+    shared_function()
     # Exit and Clean Up
 
 
