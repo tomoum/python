@@ -1,0 +1,35 @@
+[[source]]
+url        = "https://pypi.org/simple"
+verify_ssl = true
+name       = "pypi"
+
+[packages]
+pydantic       = "*"
+# pandas      = "*"
+# openpyxl    = "*"
+# xlwings     = "==0.25.1"
+# frozendict  = "==2.2.0"
+# pytest      = "==7.0.1"
+# pytest-cov  = "==3.0.0"
+# pytest-mock = "==3.7.0"
+# pytest-random-order = "==1.0.4"
+# prettytable    = "*"
+# plotnine       = "*"
+# pysimplegui    = "*"
+# matplotlib     = "*"
+# seaborn = "*"
+
+[dev-packages]
+# These are packages used only by developers and not by scripts or jenkins
+# to install these additional packages use the -d flag: pipenv sync -d
+pylint          = "*"
+pylint-pydantic = "*"
+# pylint-pytest   = "*"
+# pyinstaller = "*"
+# auto-py-to-exe  = "*"
+black           = "*"
+isort           = "*"
+# pytest-pylint   = "==0.18.0"
+
+[requires]
+python_full_version = "3.10.8"

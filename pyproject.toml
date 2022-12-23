@@ -1,0 +1,15 @@
+########################################################################
+# Description:
+# Project Tools configuration
+########################################################################
+
+[tool.pytest.ini_options]
+# unit test file pattern
+python_files = "test_*.py"
+# unit test function pattern
+python_functions = "test_*"
+# ignore these directories when collecting/discovering tests
+norecursedirs = []
+
+[tool.isort]
+profile = "black"
