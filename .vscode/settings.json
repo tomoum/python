@@ -1,69 +1,97 @@
 {
-    "[python]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "[markdown]": {
-        "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-        "editor.quickSuggestions": {
-            "comments": "on",
-            "strings": "on",
-            "other": "on"
-        }
-    },
-    "markdownlint.config": {
-        "MD025": false
-    },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.detectIndentation": false,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.guides.bracketPairs": "active",
-    "editor.guides.bracketPairsHorizontal": true,
-    "editor.insertSpaces": true,
-    "editor.rulers": [
-        88
-    ],
-    "editor.tabSize": 4,
-    "explorerExclude.backup": {},
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/__pycache__": true,
-        "**/.coverage": true,
-        "**/.coveragerc": true,
-        "**/.pytest_cache": true
-    },
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "git.fetchOnPull": true,
-    "git.pruneOnFetch": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-        "--load-plugins pylint_pydantic"
-    ],
-    "python.terminal.activateEnvironment": false,
-    "python.terminal.executeInFileDir": true,
-    "todo-tree.highlights.enabled": false,
-    "workbench.colorCustomizations": {
-        "editor.lineHighlightBackground": "#1073cf2d",
-        "editor.lineHighlightBorder": "#9fced11f"
-    },
-    "python.analysis.autoImportCompletions": false,
-    "cSpell.enabled": true,
-    "python.testing.pytestArgs": [
-        "."
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+   "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+   },
+   "[markdown]": {
+      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+      "editor.quickSuggestions": {
+         "comments": "on",
+         "other": "on",
+         "strings": "on"
+      },
+      "files.trimTrailingWhitespace": false
+   },
+   "[python]": {
+      "editor.codeActionsOnSave": {
+         "source.organizeImports": true
+      },
+      "editor.defaultFormatter": "ms-python.black-formatter"
+   },
+   "black-formatter.args": [
+      "--config=pyproject.toml"
+   ],
+   "cSpell.enabled": true,
+   "editor.bracketPairColorization.enabled": true,
+   "editor.detectIndentation": false,
+   "editor.formatOnPaste": true,
+   "editor.formatOnSave": true,
+   "editor.guides.bracketPairs": "active",
+   "editor.guides.bracketPairsHorizontal": true,
+   "editor.insertSpaces": true,
+   "editor.rulers": [
+      88
+   ],
+   "editor.tabSize": 4,
+   "explorerExclude.backup": { },
+   "files.exclude": {
+      "**/.DS_Store": true,
+      "**/.coverage": true,
+      "**/.coveragerc": true,
+      "**/.git": true,
+      "**/.hg": true,
+      "**/.pytest_cache": true,
+      "**/.svn": true,
+      "**/CVS": true,
+      "**/Thumbs.db": true,
+      "**/__pycache__": true
+   },
+   "files.trimTrailingWhitespace": true,
+   "flake8.args": [
+      "--toml-config=pyproject.toml"
+   ],
+   "git.autofetch": true,
+   "git.fetchOnPull": true,
+   "git.pruneOnFetch": true,
+   "isort.args": [
+      "--settings-path=pyproject.toml"
+   ],
+   "pylint.args": [
+      "--rcfile=pyproject.toml"
+   ],
+   "python.analysis.autoImportCompletions": false,
+   "python.analysis.typeCheckingMode": "basic",
+   "python.defaultInterpreterPath": "/usr/local/bin/python",
+   "python.formatting.provider": "black",
+   "python.languageServer": "Pylance",
+   "python.linting.enabled": true,
+   "python.linting.pylintArgs": [
+      "--load-plugins pylint_pydantic"
+   ],
+   "python.linting.pylintEnabled": true,
+   "python.terminal.activateEnvironment": false,
+   "python.terminal.executeInFileDir": true,
+   "python.testing.pytestArgs": [
+      "."
+   ],
+   "python.testing.pytestEnabled": true,
+   "python.testing.unittestEnabled": false,
+   "runItOn": {
+      "commands": [
+         {
+            "cmd": "markdown.extension.toc.addSecNumbers",
+            "isShellCommand": false,
+            "match": "\\.md$"
+         },
+         {
+            "cmd": "markdown.extension.toc.update",
+            "isShellCommand": false,
+            "match": "\\.md$"
+         }
+      ]
+   },
+   "todo-tree.highlights.enabled": false,
+   "workbench.colorCustomizations": {
+      "editor.lineHighlightBackground": "#1073cf2d",
+      "editor.lineHighlightBorder": "#9fced11f"
+   }
 }

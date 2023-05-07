@@ -3,7 +3,7 @@
 <#
 .SYNOPSIS
 This script will generate the .env file then launch the python virtual
-environment thats used to run scripts.
+environment that's used to run scripts.
 .DESCRIPTION
 .EXAMPLE
 .\repo_env.ps1
@@ -39,10 +39,11 @@ function Initialize-DotEnvFile {
 
 function Start-Main {
     Set-Location $PSScriptRoot
+    pip install pre-commit
+    pre-commit install --install-hooks
     pipenv sync -d
     Initialize-DotEnvFile
     pipenv shell
 }
 
 Start-Main
-
