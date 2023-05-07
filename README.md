@@ -9,7 +9,15 @@ my blog <https://www.muhabtomoum.com/>
 
 1. Go through the different branches and figure out which tool set you prefer.
 2. Click the big green button and select `Create a new Repository`
-![Alt text](.readme/use_template.png)
+![Alt text](docs/assets/use_template.png)
+
+## 1.1. This branch
+
+This branch uses `pipenv` to manage the virtual environment and has a utility powershell
+script to update the `PYTHONPATH` for python to find imports from the `src/common`. it
+is a bit of an unconventional way to set up a python project but i like it for the simpler
+directory structure and lightweight application development. Its not suitable for publishing
+your code to pypi for example.
 
 # 2. Repository Structure
 
@@ -56,7 +64,9 @@ These are the dot files in the root of the project to configure the python tools
 4. `pyproject.toml` - This is a configuration file used to store metadata and build
    settings for the project, serving as a unified configuration file for various tools,
    like build systems and package managers, in Python projects.
-5. `.markdownlint.jsonc` - This file contains configuration settings for the Markdownlint tool, which is used to enforce consistent formatting and style rules for Markdown documents in your project.
+5. `.markdownlint.jsonc` - This file contains configuration settings for the
+   Markdownlint tool, which is used to enforce consistent formatting and style rules
+   for Markdown documents in your project.
 6. `.pre-commit-config.yaml` - This file is used to configure pre-commit hooks, which
    are scripts that run automatically before each commit, helping to catch and prevent
    common coding issues, enforce coding standards, and ensure that your codebase remains
