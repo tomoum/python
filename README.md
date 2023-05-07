@@ -13,11 +13,21 @@ my blog <https://www.muhabtomoum.com/>
 
 ## 1.1. This branch
 
-This branch uses `pipenv` to manage the virtual environment and has a utility powershell
-script to update the `PYTHONPATH` for python to find imports from the `src/common`. it
-is a bit of an unconventional way to set up a python project but i like it for the simpler
-directory structure and lightweight application development. Its not suitable for publishing
-your code to pypi for example.
+This branch uses `poetry` to manage the virtual environment, building and publishing the
+`mypackage` python package. Poetry is a modern all in one python tool that is effective
+and efficient. This is a pretty standard way to structure your python repo. This is
+the template I use for most projects.
+
+To start developing using this setup after you clone the repository:
+
+1. `pip install poetry`
+2. `poetry install` tell poetry to create a venv and install all required packages
+   including developer packages.
+3. `poetry shell` launch a shell inside the virtual environment.
+4. `code .` launch vscode. Alternatively you can select the python interpreter associated
+   with the virtual environment created in step 2.
+
+For more information, see the documentation for [poetry](https://pypi.org/project/poetry/)
 
 # 2. Repository Structure
 
@@ -44,33 +54,22 @@ no direct control over in this Repository.
 This is where you can build your python application into a single executable to share
 with others without having to install python.
 
-## 2.6. repo_env.ps1
-
-A utility powershell script that will add the src folder to your `PYTHONPATH` set up your
-sync your pipenv environment and install all the required dependencies then launch
-a shell inside that virtual environment.
-
-## 2.7. Config Files
+## 2.6. Config Files
 
 These are the dot files in the root of the project to configure the python tools.
 
 1. `.python-version` - This file is used by `pyenv` to specify the exact version of
    Python required for the project, ensuring a consistent environment across different setups.
-2. `Pipfile` - The Pipfile is used to manage and track project dependencies, providing
-   a more human-readable and dynamic alternative to the traditional `requirements.txt` file.
-3. `Pipfile.lock` - This file is a snapshot of the exact versions of all dependencies,
-   generated from the Pipfile, ensuring that the same dependencies are installed across
-   different environments.
-4. `pyproject.toml` - This is a configuration file used to store metadata and build
+1. `pyproject.toml` - This is a configuration file used to store metadata and build
    settings for the project, serving as a unified configuration file for various tools,
    like build systems and package managers, in Python projects.
-5. `.markdownlint.jsonc` - This file contains configuration settings for the
+1. `.markdownlint.jsonc` - This file contains configuration settings for the
    Markdownlint tool, which is used to enforce consistent formatting and style rules
    for Markdown documents in your project.
-6. `.pre-commit-config.yaml` - This file is used to configure pre-commit hooks, which
+1. `.pre-commit-config.yaml` - This file is used to configure pre-commit hooks, which
    are scripts that run automatically before each commit, helping to catch and prevent
    common coding issues, enforce coding standards, and ensure that your codebase remains
     clean and maintainable.
-7. `cspell.json` - This file contains configuration settings for the cSpell tool, a
+1. `cspell.json` - This file contains configuration settings for the cSpell tool, a
    spell checker designed specifically for code, which helps identify and correct
    spelling mistakes in your source code, comments, and documentation.

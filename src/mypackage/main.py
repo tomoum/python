@@ -1,9 +1,12 @@
+# ---------------------------------------------------------------------------------
+# Copyright (c) John Doe. All rights reserved.
+# Licensed under the MIT License. See LICENSE in project root for information.
+# ---------------------------------------------------------------------------------
 """
-Date Created: 2023-01-78
-
+Author     : John Doe
 Description:
-    Main application entry point
 """
+
 
 from __future__ import annotations
 
@@ -13,7 +16,8 @@ import sys
 from pathlib import Path
 
 import pydantic as pyd
-from my_shared_module import shared_function
+
+from .common.my_shared_module import shared_function
 
 APP_VERSION = "v0.0.1"
 
@@ -39,7 +43,7 @@ class AppConfig(pyd.BaseModel):
         # Silence All Other loggers
         for log_name, log_obj in logging.Logger.manager.loggerDict.items():
             if log_name != __name__:
-                log_obj.disabled = True  # type: ignore
+                log_obj.disabled = True  # type: ignore[disabled]
 
         logger = logging.getLogger(__name__)
         logger.info(f"App Version: {APP_VERSION}")
@@ -54,7 +58,4 @@ def main() -> None:  # pylint: disable=missing-function-docstring
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception:  # pylint: disable=broad-except
-        logging.exception("Exception caught at the main handler")
+    main()
