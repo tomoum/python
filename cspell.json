@@ -8,6 +8,7 @@
         "Pipfile",
         "pydantic",
         "pypi",
+        "pyproject",
         "PYTHONPATH",
         "VENV",
         "virtualenvs",
