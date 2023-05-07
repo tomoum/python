@@ -130,5 +130,4 @@ dmypy.json
 **/*.log
 
 *.code-workspace
-*.png
 test_exe/
