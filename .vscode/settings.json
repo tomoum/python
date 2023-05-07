@@ -17,11 +17,17 @@
       },
       "editor.defaultFormatter": "ms-python.black-formatter"
    },
+   "[toml]": {
+      "editor.defaultFormatter": "bungcip.better-toml"
+   },
    "black-formatter.args": [
       "--config=pyproject.toml"
    ],
    "cSpell.enabled": true,
    "editor.bracketPairColorization.enabled": true,
+   "editor.codeActionsOnSave": {
+      "source.fixAll.sortJSON": true
+   },
    "editor.detectIndentation": false,
    "editor.formatOnPaste": true,
    "editor.formatOnSave": true,
@@ -32,29 +38,27 @@
       88
    ],
    "editor.tabSize": 4,
-   "explorerExclude.backup": { },
+   "explorerExclude.backup": {},
    "files.exclude": {
-      "**/.DS_Store": true,
       "**/.coverage": true,
       "**/.coveragerc": true,
+      "**/.DS_Store": true,
       "**/.git": true,
       "**/.hg": true,
       "**/.pytest_cache": true,
       "**/.svn": true,
+      "**/__pycache__": true,
       "**/CVS": true,
-      "**/Thumbs.db": true,
-      "**/__pycache__": true
+      "**/Thumbs.db": true
    },
    "files.trimTrailingWhitespace": true,
-   "flake8.args": [
-      "--toml-config=pyproject.toml"
-   ],
    "git.autofetch": true,
    "git.fetchOnPull": true,
    "git.pruneOnFetch": true,
    "isort.args": [
       "--settings-path=pyproject.toml"
    ],
+   "json.format.keepLines": false,
    "pylint.args": [
       "--rcfile=pyproject.toml"
    ],

@@ -69,7 +69,7 @@ persistent = "yes"
 suggestion-mode = "yes"
 unsafe-load-any-extension = "no"
 disable = "W1203"
-load-plugins="pylint_pytest"
+load-plugins = "pylint_pytest"
 
 [tool.pylint.'MESSAGES CONTROL']
 enable = "c-extension-no-member"

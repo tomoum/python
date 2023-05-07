@@ -12,6 +12,7 @@
         "ms-python.vscode-pylance",
         "kevinrose.vsc-python-indent",
         "jonnyasmar.run-it-on-v2",
-        "sourcery.sourcery"
+        "sourcery.sourcery",
+        "richie5um2.vscode-sort-json"
     ]
 }
