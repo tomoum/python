@@ -26,9 +26,13 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
 ]
 
+[tool.poetry.scripts]
+mypackage = 'mypackage.main:main'
+
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
 pydantic = "^1.10.7"
+logzilla = "^0.1.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.0"

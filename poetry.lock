@@ -259,6 +259,18 @@ files = [
 ]
 
 [[package]]
+name = "logzilla"
+version = "0.1.0"
+description = "Python logger wrapper for logging to console and file"
+category = "main"
+optional = false
+python-versions = ">=3.8.1,<4.0"
+files = [
+    {file = "logzilla-0.1.0-py3-none-any.whl", hash = "sha256:afe28bc54d92d0ae4f53296bbc408dde8043320c1ac1b6eb7d0ade7aa8a82279"},
+    {file = "logzilla-0.1.0.tar.gz", hash = "sha256:8a6789b1681e4c034c004e45866178dec2b36431b00fcc5de77a45323c5d2737"},
+]
+
+[[package]]
 name = "mccabe"
 version = "0.7.0"
 description = "McCabe checker, plugin for flake8"
@@ -690,4 +702,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "d442dc09a38b777e52ff09bb18a49faef8d03a2259f7e40503ae9bff7899784a"
+content-hash = "01a5adbf6739a0f4cb2af8cd1f17c40eb82a351a56b790027520d6ea4c8eae89"
