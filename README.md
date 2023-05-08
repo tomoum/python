@@ -8,7 +8,8 @@ python packages. For more information about python and development environment c
 my blog <https://www.muhabtomoum.com/>
 
 1. Go through the different branches and figure out which tool set you prefer.
-2. Click the big green button and select `Create a new Repository`
+2. Click the big green button and select `Create a new Repository` and don't
+   forget to select `include all branches`
 ![Alt text](docs/assets/use_template.png)
 
 ## 1.1. This branch
